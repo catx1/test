@@ -26,8 +26,20 @@
 }
 
 .box{
-    border:5px solid black;
+    border: 5px solid black;
     width: 200px;
     height: 200px;
     display:inline-block;
+    vertical-align: middle;
+    text-align:center;
+    font-size:200px;
+    
+}
+
+.piece{
+  border-top:auto;
+}
+
+.row {
+  height: 200px;
 }
