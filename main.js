@@ -1,32 +1,38 @@
-/*
+console.log("hello");
 
+let turn = "x";
 
+for (let i = 1; i < 10; i++) {
+  let box = document.getElementById(`box${[i]}`);
+  console.log(box[i]);
 
-
-*/
-
-let turn = "X";
-
-function swapTurns() {
-  if (turn == "X") {
-    turn = "O";
-  } else {
-    turn = "X";
-  }
+  box.addEventListener("click", handleClick);
 }
 
-let boxOne = document.getElementById("1");
+// let container = document.getElementById("flexbox-container");
 
-boxOne.addEventListener("click", handleClick);
+// container.addEventListener("click", handleClickDemo);
+
+// function handleClickDemo(eventObject) {
+//   let id = eventObject.target.id;
+//   let box = eventObject.target;
+
+//   box.innerText = turn;
+//   swapTurns();
+// }
 
 function handleClick(eventObject) {
-  eventObject.target.innerText = "X";
+  let id = eventObject.target.id;
+  let box = eventObject.target;
+
+  box.innerText = turn;
+  swapTurns();
 }
 
-let boxTwo = document.getElementById("2");
-
-boxTwo.addEventListener("click", handleClick2);
-
-function handleClick2(eventObject) {
-  eventObject.target.innerText = "O";
+function swapTurns() {
+  if (turn == "x") {
+    turn = "o";
+  } else {
+    turn = "x";
+  }
 }
