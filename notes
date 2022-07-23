@@ -22,3 +22,24 @@
                 height: 200px;
                 display:inline-block;
             }
+
+
+
+
+
+            /*let boxOne = document.getElementById("box1");
+
+            boxOne.addEventListener("click", handleClick)
+            
+            function handleClick(eventObject) {
+                eventObject.target.innerText = "x";
+            }
+            
+            let boxTwo = document.getElementById("box2");
+            
+            boxTwo.addEventListener("click", handleClick2)
+            
+            function handleClick2(eventObject) {
+                eventObject.target.innerText = "o";
+            }
+            */
