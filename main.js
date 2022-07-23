@@ -36,3 +36,7 @@ function swapTurns() {
     turn = "x";
   }
 }
+
+function onWin() {
+  document.body.style.backgroundColor = "red";
+}
