@@ -1,28 +1,3 @@
-<<<<<<< Updated upstream
-console.log("hello");
-
-let turn = "x";
-
-for (let i = 1; i < 10; i++) {
-  let box = document.getElementById(`box${[i]}`);
-  console.log(box[i]);
-
-  box.addEventListener("click", handleClick);
-}
-
-// let container = document.getElementById("flexbox-container");
-
-// container.addEventListener("click", handleClickDemo);
-
-// function handleClickDemo(eventObject) {
-//   let id = eventObject.target.id;
-//   let box = eventObject.target;
-
-//   box.innerText = turn;
-//   swapTurns();
-// }
-
-=======
 let turn = "x";
 
 win = false;
@@ -35,33 +10,19 @@ for (let i = 1; i < 10; i++) {
   box.addEventListener("click", handleClick);
 }
 
->>>>>>> Stashed changes
 function handleClick(eventObject) {
   let id = eventObject.target.id;
   let box = eventObject.target;
 
   box.innerText = turn;
   swapTurns();
-<<<<<<< Updated upstream
-=======
   checkCombinations();
   checkWin();
->>>>>>> Stashed changes
 }
 
 function swapTurns() {
   if (turn == "x") {
     turn = "o";
-<<<<<<< Updated upstream
-  } else {
-    turn = "x";
-  }
-}
-
-function onWin() {
-  document.body.style.backgroundColor = "red";
-}
-=======
     document.getElementById("headerbanner").innerHTML = "player o's turn";
   } else {
     turn = "x";
@@ -173,4 +134,3 @@ function checkWin() {
 if (win == true) {
   document.getElementById("headerbanner").innerHTML = "you won!";
 }
->>>>>>> Stashed changes
