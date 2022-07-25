@@ -24,6 +24,7 @@ function handleClick(eventObject) {
 }
 
 
+// swaps turns
 function swapTurns() {
     if (turn == "x") {
         turn = "o";
@@ -46,6 +47,7 @@ let [
   ] = [false, false, false, false, false, false, false, false];
   
 
+  // checks if any combinations are true
 function checkCombinations() {
     if (
       document.getElementById("box1").innerText ===
@@ -149,6 +151,7 @@ function checkCombinations() {
 
 
 
+  // checks if player has won + displays result
 function checkWin() {
     if (
         combination1 || 
@@ -170,6 +173,9 @@ function checkWin() {
             turn = "x";
         }
         document.getElementById("headerbanner").innerText = "player "+turn+" has won!";
+
+
+        // remove ability to click
         for (let i = 1; i < 10; i++) {
 
             let box = document.getElementById(`box${[i]}`);
@@ -183,6 +189,7 @@ function checkWin() {
 } 
     
 
+// button to start new game 
 const button = document.querySelector("button")
 button.onclick = () => {
     window.location.reload();
