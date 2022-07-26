@@ -3,7 +3,8 @@ let turn = "x"
 
 let win = false
 
-document.getElementById("headerbanner").innerHTML = "press a box to start";
+document.getElementById("headerbanner").innerHTML = "click a box to start";
+
 
 for (let i = 1; i < 10; i++) {
 
@@ -173,7 +174,7 @@ function checkWin() {
             turn = "x";
         }
         document.getElementById("headerbanner").innerText = "player "+turn+" has won!";
-
+        document.body.style.backgroundColor = "red"
 
         // remove ability to click
         for (let i = 1; i < 10; i++) {
@@ -182,8 +183,27 @@ function checkWin() {
             box.removeEventListener("click", handleClick)
         
             }
-       
-    } else {
+        
+    } else if  (
+        document.getElementById("box1").innerText != "" &&
+        document.getElementById("box2").innerText != "" &&
+        document.getElementById("box3").innerText != "" &&
+        document.getElementById("box4").innerText != "" &&
+        document.getElementById("box5").innerText != "" &&
+        document.getElementById("box6").innerText != "" &&
+        document.getElementById("box7").innerText != "" &&
+        document.getElementById("box8").innerText != "" &&
+        document.getElementById("box9").innerText != "" 
+    )  {
+        for (let i = 1; i < 10; i++) {
+
+            let box = document.getElementById(`box${[i]}`);
+            box.removeEventListener("click", handleClick)
+        document.getElementById("headerbanner").innerHTML = "it's a draw!";
+
+    }
+
+    }else {
         console.log("not done")
     }
 } 
@@ -195,4 +215,3 @@ button.onclick = () => {
     window.location.reload();
 }
 
-//function draw()
